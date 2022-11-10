@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons routerLink="/login">
+      <ion-button>
+        <ion-icon name="arrow-back" style="margin-left: 7%;"></ion-icon> &nbsp;
+        Logout
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-card >
+  <!-- Untuk Menampilkan QR Code -->
+  <qrcode [qrdata]="npm" name="npm" class="center" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  <ion-card-content>
+    Your QR Code : {{npm}}
+  </ion-card-content>
+</ion-card>
+</ion-content>
